@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with us for any questions about Sleep Calculator. Contact our support team for assistance with your sleep schedule optimization.">
+    <title>Contact Us - Sleep Calculator</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Required for Web3Forms hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <style>
+        /* Hero Section Styles */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 50px 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 15px auto;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            animation: fadeIn 0.5s ease-out;
+            width: 1170px;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeIn 0.7s ease-out;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .hero-image img {
+            max-width: 280px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            background: var(--secondary-color);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1200px) {
+            .about-hero {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-image img {
+                max-width: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-image img {
+                max-width: 180px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Rest of your contact page styles */
+        .simple-contact-page {
+            padding: 40px 0;
+            background: var(--background-color);
+        }
+
+        .simple-contact-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-background);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+        }
+
+        .simple-contact-info {
+            padding-right: 20px;
+            border-right: 1px solid rgba(92, 107, 192, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .simple-contact-info h1 {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin: 15px 0 10px;
+        }
+
+        .simple-contact-info p {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            max-width: 300px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            background: rgba(92, 107, 192, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .contact-item span {
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .simple-contact-form {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .simple-contact-form input,
+        .simple-contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid rgba(92, 107, 192, 0.2);
+            border-radius: 8px;
+            background: var(--background-color);
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .simple-contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .simple-contact-form input:focus,
+        .simple-contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.1);
+        }
+
+        .simple-contact-form .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .simple-contact-form .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(92, 107, 192, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .simple-contact-wrapper {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                gap: 30px;
+                padding: 30px;
+            }
+            
+            .simple-contact-page {
+                padding: 30px 0;
+            }
+
+            .simple-contact-info {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(92, 107, 192, 0.2);
+                padding-bottom: 30px;
+            }
+
+            .simple-contact-info h1 {
+                font-size: 2rem;
+            }
+
+            .contact-item {
+                padding: 15px;
+            }
+        }
+
+        .contact-icon-header {
+            text-align: center;
+            background: #f8f9ff;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        .contact-icon-header i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/sleeping calculators.png" alt="Sleep Calculator Logo">
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="how-to-use.html"><i class="fas fa-question-circle"></i> How to Use</a>
+                <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+            <div class="mode-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="about-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Contact Us</h1>
+                    <p>We are dedicated to helping you achieve better sleep through innovative solutions and personalized recommendations.</p>
+                    <a href="index.html" class="hero-button">
+                        <i class="fas fa-arrow-right"></i>
+                        View more
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="Images/contact.png" alt="Sleep Calculator Guide">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="simple-contact-page">
+            <div class="simple-contact-wrapper">
+                <div class="simple-contact-info">
+                    <div class="contact-icon-header">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h1>Contact Us</h1>
+                    <p>Get in touch with us for any questions or support</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@sleepcalculator.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(501) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Crosby Street, NY, US</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="simple-contact-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" id="contactForm">
+                    <!-- Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="db1df410-c6e2-408e-a1b0-5ffebd25b139">
+                    
+                    <!-- Subject -->
+                    <input type="hidden" name="subject" value="New Submission from Sleep Calculator">
+                    
+                    <!-- From Name -->
+                    <input type="hidden" name="from_name" value="Sleep Calculator Website">
+                    
+                    <!-- Redirect URL -->
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <!-- hCaptcha -->
+                    <div class="h-captcha" data-captcha="true"></div>
+                    
+                    <div id="formStatus" class="form-status"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">First Name</label>
+                        <input type="text" id="name" name="First Name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="Phone Number" required placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="Images/sleeping calculators.png" alt="Sleep Calculator Logo">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="how-to-use.html">How to Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                All rights reserved by Sleep Calculator | Powered by
+                <a href="https://wissentechs.com" target="_blank">Wissen Techs
+              </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

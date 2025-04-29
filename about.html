@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our mission to help you achieve better sleep. Discover how our sleep calculator works and the science behind sleep cycles.">
+    <title>About Us - Sleep Calculator</title>
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .hero-button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-decoration: none;
+        }
+
+        .hero-button::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 8px;
+            left: 50%;
+            background: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .hero-button:hover::after {
+            width: calc(100% - 48px);
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            background: var(--secondary-color);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Images/sleeping calculators.png" alt="Sleep Calculator Logo">
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About Us</a>
+                <a href="how-to-use.html"><i class="fas fa-question-circle"></i> How to Use</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </nav>
+            <div class="mode-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="about-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>About Us</h1>
+                    <p>We are dedicated to helping you achieve better sleep through innovative solutions and personalized recommendations.</p>
+                    <a href="contact.html" class="hero-button">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                </div>
+                <div class="hero-image">
+                    <img src="Images/512x512bb.jpg" alt="Sleep Calculator App">
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="mission-section">
+            <div class="mission-content">
+                <h2>Our Mission</h2>
+                <div class="mission-wrapper">
+                    <div class="mission-text">
+                        <h3>Engineering Dreams, Fueling Success</h3>
+                        <p>Our mission is to revolutionize the way people approach sleep. We believe that quality sleep is fundamental to a healthy and productive life. Through our innovative sleep calculator, we help individuals optimize their sleep schedules and wake up feeling refreshed.</p>
+                    </div>
+                    <div class="mission-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-items">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sleep Calculator</h3>
+                            <p>Advanced algorithm to calculate optimal bedtime based on your wake-up time and sleep cycles.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Smart Reminders</h3>
+                            <p>Customizable bedtime reminders to help you maintain a consistent sleep schedule.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sleep Analytics</h3>
+                            <p>Track and analyze your sleep patterns to improve your sleep quality over time.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sleep Education</h3>
+                            <p>Expert tips and resources to help you understand and improve your sleep habits.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sleep Science</h3>
+                            <p>Learn about the science behind sleep cycles and how they affect your daily performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Health Insights</h3>
+                            <p>Understand the connection between sleep quality and your overall health and well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="Images/sleeping calculators.png" alt="Sleep Calculator Logo">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="how-to-use.html">How to Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                All rights reserved by Sleep Calculator | Powered by
+                <a href="https://wissentechs.com" target="_blank">Wissen Techs
+              </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

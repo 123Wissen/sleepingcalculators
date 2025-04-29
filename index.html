@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate your optimal bedtime based on sleep cycles. Get personalized sleep recommendations and improve your sleep quality with our advanced sleep calculator."
+    />
+    <title>Sleep Calculator - Find Your Perfect Bedtime</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Images/sleeping calculators.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/Images/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="ahrefs-site-verification"
+      content="1784ee3db33d3167c2278ce625d93c5151407460e639b1b18c7f5127b92f60e7"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="/Images/sleeping calculators.png"
+              alt="Sleep Calculator Logo"
+            />
+          </a>
+        </div>
+        <button class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <a href="index.html" class="active"
+            ><i class="fas fa-home"></i> Home</a
+          >
+          <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+          <a href="how-to-use.html"
+            ><i class="fas fa-question-circle"></i> How to Use</a
+          >
+          <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+        <div class="mode-toggle">
+          <i class="fas fa-sun"></i>
+          <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider round"></span>
+          </label>
+          <i class="fas fa-moon"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Calculator Section -->
+      <section class="calculator-section">
+        <div class="input-group">
+          <h2>I want to wake up at:</h2>
+          <div class="time-picker">
+            <select id="hour">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8" selected>8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select id="minute">
+              <option value="00" selected>00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+            <select id="ampm">
+              <option value="AM" selected>AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+
+          <div class="age-group">
+            <label for="age">Age group:</label>
+            <select id="age">
+              <option value="teen">13-17 years</option>
+              <option value="adult" selected>18-64 years</option>
+              <option value="senior">65+ years</option>
+            </select>
+            <i
+              class="fas fa-info-circle"
+              id="ageInfo"
+              title="Sleep needs vary by age"
+            ></i>
+          </div>
+
+          <button class="primary-btn" id="calculateBtn">
+            <i class="fas fa-calculator"></i> Calculate Bedtime
+          </button>
+        </div>
+
+        <div class="quick-actions">
+          <button class="secondary-btn" id="napBtn">
+            <i class="fas fa-bed"></i> Power Nap Timer
+          </button>
+          <button class="secondary-btn" id="reminderBtn">
+            <i class="fas fa-bell"></i> Set Reminder
+          </button>
+        </div>
+
+        <div id="napTimer" class="nap-timer hidden">
+          <div class="timer-circle">
+            <div class="timer-display">20:00</div>
+          </div>
+          <button class="primary-btn" id="startNapBtn">
+            <i class="fas fa-play"></i> Start Power Nap
+          </button>
+        </div>
+      </section>
+
+      <!-- Results Section -->
+      <section class="results-section">
+        <div id="results" class="results-container">
+          <!-- Results will be displayed here -->
+        </div>
+
+        <div class="sleep-info">
+          <h3><i class="fas fa-info-circle"></i> Sleep Cycle Information</h3>
+          <p>
+            A sleep cycle lasts about 90 minutes, and a good night's sleep
+            consists of 5-6 complete cycles. Waking up at the end of a cycle
+            helps you feel more refreshed.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Reminder Modal -->
+    <div id="reminderModal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Set Bedtime Reminder</h3>
+        <p>We'll remind you when it's time to go to bed!</p>
+        <div class="reminder-options">
+          <label>
+            <input type="checkbox" id="reminderEnabled" />
+            Enable reminder
+          </label>
+          <select id="reminderTime">
+            <option value="5">5 minutes before</option>
+            <option value="15">15 minutes before</option>
+            <option value="30">30 minutes before</option>
+          </select>
+        </div>
+        <button id="saveReminderBtn" class="primary-btn">Save</button>
+        <button id="closeModalBtn" class="secondary-btn">Close</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html">
+            <img
+              src="/Images/sleeping calculators.png"
+              alt="Sleep Calculator Logo"
+            />
+          </a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="how-to-use.html">How to Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="copyright">
+        
+        <p>
+          All rights reserved by Sleep Calculator | Powered by
+          <a href="https://wissentechs.com" target="_blank">Wissen Techs
+        </p>
+      </div>
+    </footer>
+
+    <!-- Load scripts -->
+    <script>
+      // Check if the browser supports notifications
+      if ("Notification" in window) {
+        // Request permission when needed
+        document.addEventListener("DOMContentLoaded", () => {
+          if (
+            Notification.permission !== "granted" &&
+            Notification.permission !== "denied"
+          ) {
+            Notification.requestPermission();
+          }
+        });
+      }
+    </script>
+    <script src="script.js"></script>
+
+    <style>
+      .quick-actions {
+        display: flex;
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .secondary-btn {
+        flex: 1;
+        padding: 12px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .secondary-btn:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+
+      .nap-timer {
+        margin-top: 30px;
+        padding: 20px;
+        background: var(--background-color);
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .timer-circle {
+        width: 150px;
+        height: 150px;
+        border: 6px solid var(--primary-color);
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .timer-display {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </body>
+</html>
