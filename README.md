@@ -1,5 +1,5 @@
 
-# 💤 SleepinCalculators
+# 💤 SleepingCalculators
 
 
 ![image](https://github.com/user-attachments/assets/c860bdd6-7b8a-4b2d-ae78-292012ab30d7)
